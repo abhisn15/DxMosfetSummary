@@ -28,8 +28,8 @@ function Login() {
 
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
-    controls.dampingFactor = 0.02;
-    controls.enableZoom = true;
+    controls.dampingFactor = 0.008;
+    controls.enableZoom = false;
     controls.update();
 
     // Earth setup
@@ -110,7 +110,7 @@ function Login() {
     function animate() {
       requestAnimationFrame(animate);
       earthMesh.rotation.y += 0.001;
-      cloudsMesh.rotation.y += 0.0014;
+      cloudsMesh.rotation.y += 0.0016;
       glowMesh.rotation.y += 0.0002;
       stars.rotation.y -= 0.002;
       controls.update();
